@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import InsertProductService from '../services/serviceProducts';
+import GetProductService from '../services/serviceProducts';
 
 export default class ControlProduct {
-  public insertProductService = new InsertProductService();
+  public getProductService = new GetProductService();
 
   async getAll(_req: Request, res: Response) {
-    const products = await this.insertProductService.getAll();
+    const products = await this.getProductService.getAll();
     return res.status(200).json(products);
   }
 }

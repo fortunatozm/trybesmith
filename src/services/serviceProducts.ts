@@ -1,8 +1,8 @@
 import { IProduct } from '../iterfaces/IProducts';
-import InsertProductModel from '../models/modelProducts';
+import GetProductModel from '../models/modelProducts';
 
-export default class InsertProductService {
-  public product = new InsertProductModel();
+export default class GetProductService {
+  public product = new GetProductModel();
 
   public async getAll(): Promise<IProduct[]> {
     const products = await this.product.getAll();
